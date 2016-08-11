@@ -1,0 +1,29 @@
+{
+  "name": "wasabiH",
+  "version": "0.0.1",
+  "description": "wasabi design H5——心怡科技物流移动端H5框架",
+  "main": "index.js",
+  "keywords": [
+    "react",
+    "wasabi",
+    "alog"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangzhiyonglyk/wasabiH.git"
+  },
+  "author": {
+    "name": "wangzhiyong"
+  },
+  "maintainers": [
+    {
+      "name": "wangzhiyong",
+      "email": "wangzhiyonglyk@163.com"
+    }
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangzhiyonglyk/wasabiH/issues"
+  },
+  "devDependencies": {}
+}
