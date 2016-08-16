@@ -1,7 +1,6 @@
 /**
  * Created by wangzhiyong on 16/8/16.
  */
-<<<<<<< HEAD
 
 exports.Button = require('./Buttons/Button.jsx');//
 exports.LinkButton = require('./Buttons/LinkButton.jsx');//
@@ -17,5 +16,3 @@ exports.ActionSheet = require('./Navigation/ActionSheet.jsx');//
 exports.Navbar = require('./Navigation/Navbar.jsx');//
 exports.Tabs = require('./Navigation/Tabs.jsx');//
 exports.TabModel = require('./Model/TabModel.js');//
-=======
->>>>>>> 511270ba12f7c749ea48f7766855dfe3240e70f9
