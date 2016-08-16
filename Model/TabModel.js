@@ -27,5 +27,5 @@ class TabModel {
         this.parentuuid = null;//父标签页的唯一标识
 
     }
-}ß
+}
 module .exports=TabModel;
