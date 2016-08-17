@@ -16,3 +16,4 @@ exports.ActionSheet = require('./Navigation/ActionSheet.jsx');//
 exports.NavBar = require('./Navigation/NavBar.jsx');//
 exports.Tabs = require('./Navigation/Tabs.jsx');//
 exports.TabModel = require('./Model/TabModel.js');//
+exports.ButtonModel = require('./Model/ButtonModel.js');//

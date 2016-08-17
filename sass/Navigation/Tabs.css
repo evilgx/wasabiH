@@ -1,0 +1,32 @@
+@import url("../weui.css");
+.wasabiH-tabs{
+    width: 100%;
+}
+.wasabiH-tabs li{
+    float: left;
+    width: 50%;
+    height: 44px;
+    color: #666666;
+    font-size: 16px;
+    line-height: 44px;
+    list-style: none;
+    background: #ffffff;
+    text-align: center;
+}
+.wasabiH-tabs.default.active span{
+    height: 42px;
+    width: 58px;
+    color: #3aaeff;
+    display: inline-block;
+    border-bottom: 2px solid dodgerblue;
+}
+
+
+
+.wasabiH-tabs .section>div {
+    display:none;
+}
+.wasabiH-tabs .section>.active
+{
+    display:block;
+}
