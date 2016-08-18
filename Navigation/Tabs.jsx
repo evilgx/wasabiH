@@ -6,13 +6,14 @@ var Tabs=React.createClass({
         theme: React.PropTypes.oneOf([
             "primary",
             "default",
-            "green"
-        ])
+        ]),
+        height:React.PropTypes.string,
     },
     getDefaultProps() {
         return {
             tabs: [],
             theme:"default",
+            height:"44px",
         }
     },
     getInitialState(){
@@ -44,11 +45,11 @@ var Tabs=React.createClass({
                 <ul className="header">
                     {
                         this.state.tabs.map((child,index)=>{
-                            return <li key={index} className={"wasabiH-tabs  "+this.props.theme+" "+(child.active==true?"active ":"")} onClick={this.tabClickHandler.bind(this,index)}><span>{child.title}</span></li>
+                            return <li key={index} style={{height:this.props.height,lineHeight:this.props.height}} className={"wasabiH-tabs  "+this.props.theme+" "+(child.active==true?"active ":"")} onClick={this.tabClickHandler.bind(this,index)}><span>{child.title}</span></li>
                         })
                     }
                 </ul>
-                <div className={"section "+this.props.theme} >
+                <div className={"section "+this.props.theme} style={{position:"absolute",top:this.props.height}}>
                     {this.state.tabs.map((child, index)=> {
                         return (<div key={index} className={(child.active==true?"active":"")}>{child.content}</div>);
                     })

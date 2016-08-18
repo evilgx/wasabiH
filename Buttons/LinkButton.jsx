@@ -8,12 +8,12 @@ var LinkButton=React.createClass({
         theme: React.PropTypes.oneOf([//主题
             "primary",
             "default",
-        ]),//主题
-        width:React.PropTypes.string,
-        active:React.PropTypes.boolean,
+        ]),
+        width:React.PropTypes.string,//宽度
+        active:React.PropTypes.bool,//是否选中
         iconCls:React.PropTypes.string,//图片
         backgroundColor:React.PropTypes.string,//背景颜色
-        onClick:React.PropTypes.func,//单击地址
+        onClick:React.PropTypes.func,//单击事件
     },
     getDefaultProps() {
         return {
@@ -37,7 +37,7 @@ var LinkButton=React.createClass({
     clickHandle(){
         //单击事件
         if(this.props.onClick){
-            this.props.onClick(this.props.name,this.props.title);
+            this.props.onClick(this.props.name,this.state.title);
         };
     },
     style(){
