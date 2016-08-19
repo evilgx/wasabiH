@@ -1,0 +1,53 @@
+@import url("../weui.css");
+/*待办事项*/
+.icon-agent {
+    background-image: url('../../img/icon/agent.png');
+    background-repeat: no-repeat;
+    background-position:  center center;
+}
+/*待办事项选中*/
+.icon-agent.active {
+    background-image: url('../../img/icon/agentSelect.png');
+    background-repeat: no-repeat;
+    background-position:  center center;
+}
+
+/*已办事项*/
+.icon-already {
+    background-image: url('../../img/icon/already.png');
+    background-repeat: no-repeat;
+    background-position:  center center;
+}
+/*已办事项选中*/
+.icon-already.active {
+    background-image: url('../../img/icon/alreadySelect.png');
+    background-repeat: no-repeat;
+    background-position:  center center;
+}
+
+/*流程发起*/
+.icon-process {
+    background-image: url('../../img/icon/process.png');
+    background-repeat: no-repeat;
+    background-position:  center center;
+}
+/*流程发起选中*/
+.icon-process.active {
+    background-image: url('../../img/icon/processSelect.png');
+    background-repeat: no-repeat;
+    background-position:  center center;
+}
+
+/*我的发起*/
+.icon-myself {
+    background-image: url('../../img/icon/myself.png');
+    background-repeat: no-repeat;
+    background-position:  center center;
+}
+/*我的发起选中*/
+.icon-myself.active {
+    background-image: url('../../img/icon/myselfSelect.png');
+    background-repeat: no-repeat;
+    background-position:  center center;
+}
+

@@ -1,0 +1,29 @@
+@import url("../weui.css");
+.wasabiH-linkbutton{
+    height: 50px;
+    padding-top: 6px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+}
+.wasabiH-icon{
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    background-size: 28px 28px;
+    vertical-align: bottom;
+}
+.wasabiH-title{
+    height: 22px;
+    padding-top: 2px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #929292;
+}
+.wasabiH-title.active{
+    color: #3aaeff;
+}

@@ -1,0 +1,55 @@
+@import url("../weui.css");
+.wasabiH-button{
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    padding-left:10px;
+    padding-right: 10px;
+    margin-top: 15px;
+    outline:none;
+    cursor:pointer;
+    position: relative;
+}
+.wasabiH-button.size-small{
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+}
+.wasabiH-button.size-default{
+    width: 230px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    border: 1px solid;
+}
+.wasabiH-button.size-large{
+    height: 42px;
+    line-height: 42px;
+    width: 100%;
+    font-size: 18px;
+}
+
+
+.wasabiH-button.default{
+    background-color: #f7f7f7;
+    color:#454545;
+}
+.wasabiH-button.primary{
+    background-color: #04be02;
+    color:#fff;
+}
+.wasabiH-button.warn{
+    background-color: #ef4f4f;
+    color:#fff;
+}
+
+.wasabiH-button[disabled] {
+    border: none;
+    color: hsla(0,0%,100%,.6);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+.wasabiH-button.default[disabled]{
+    color: #c9c9c9;
+}

@@ -1,0 +1,9 @@
+@import url("../weui.css");
+.wasabiH-toolbar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    bottom:0;
+}
