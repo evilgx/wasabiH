@@ -46,8 +46,9 @@ var NavBar=React.createClass({
         return style;
     },
     render(){
+        var width=100/this.state.buttons.length.toFixed(2) + '%';
         var buttonList=this.state.buttons.map((child,index)=>{
-                return <LinkButton key={child.name} {...child} onClick={this.buttonClick.bind(this,child.name,child.title)}></LinkButton>
+                return <LinkButton width={width} key={child.name} {...child} onClick={this.buttonClick.bind(this,child.name,child.title)}></LinkButton>
         })
         return(
             <div className="wasabiH-toolbar" style={this.style()}>

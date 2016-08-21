@@ -4,7 +4,6 @@ var Button=React.createClass({
     propTypes:{
         name: React.PropTypes.string,//按钮名称
         title: React.PropTypes.string,//按钮标题
-        tip: React.PropTypes.string,//按钮提示信息
         theme: React.PropTypes.oneOf([
             "primary",
             "default",
@@ -30,28 +29,50 @@ var Button=React.createClass({
         return{
             theme:this.props.theme,
             disabled:this.props.disabled,
+            name:this.props.name,
+            title:this.props.title,
+            hide:this.props.hide,
         }
     },
     componentWillReceiveProps(nextProps){
         this.setState({
             theme:nextProps.theme,
             disabled:nextProps.disabled,
+            name:nextProps.name,
+            title:nextProps.title,
+            hide:nextProps.hide,
         });
     },
-    clickHandle(){
+    clickHandler(){
         if(this.props.onClick){
             this.props.onClick();
         }
     },
+    getStyle(){
+        var style=this.props.style;
+        if (style) {
+            if (style.display) {
+
+            }
+            else {
+                style.display = this.state.hide ? "none" : "block";
+            }
+        }
+        else {
+            style = {};
+            style.display = this.state.hide ? "none" : "block";
+        };
+        return style;
+    },
     render(){
         var props = {
             className: "wasabiH-button " + this.state.theme + " size-" + this.props.size + " " + this.props.className,
-            style: this.props.style,
+            style: this.getStyle(),
             disabled: this.state.disabled == true ? "disabled" : null,
-            name:this.props.name,
+            name:this.state.name,
         }
         return(
-            <button {...props} onClick={this.clickHandle} type="button">{this.props.title}</button>
+            <button {...props} onClick={this.clickHandler} type="button">{this.state.title}</button>
         )
     }
 });
