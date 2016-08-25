@@ -1,0 +1,38 @@
+  /*create by wangzhiyong*/
+/*页头样式*/
+header {
+    background-color: #46CA5E;
+    border-bottom: 1px solid #c8c8c8;
+    color: #fff;
+    top: 0;
+    top: 0;
+    height: 44px;
+    line-height: 44px;
+    display: -webkit-box;
+    display: box;
+}
+header, footer, .header-secondary {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+header nav {
+    padding: 0 5px;
+}
+header nav.left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+header nav.right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+header > * {
+    -webkit-box-flex: 0;
+    box-flex: 0;
+}

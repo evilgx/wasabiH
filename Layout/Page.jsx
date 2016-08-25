@@ -1,12 +1,11 @@
 //create by wangzhiyong
-//date:2016-08-22
+//date:2016-08-25
 //一个单页面
 //
 let React=require("react");
 let Page=React.createClass({
     propsType:{
         active:React.PropTypes.bool,//是否激活
-        id :React.PropTypes.string,//关键字
 
     },
     getDefaultProps:function() {
@@ -27,7 +26,7 @@ let Page=React.createClass({
     render :function() {
 
         return (<section className={"page "+this.state.active?"active":""}>
-
+            {this.children}
         </section>)
     }
 

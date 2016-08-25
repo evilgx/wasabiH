@@ -1,0 +1,22 @@
+/*create by wangzhiyong*/
+/*date:2016-08-25*/
+/*desc:页体样式*/
+article {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    visibility: hidden;
+    display: none;
+    overflow: hidden;
+    z-index: 0;
+    background-color: #fff;
+}
+article.active {
+    visibility: visible;
+    display: block;
+    z-index: 1;
+}
+header ~ article {
+    top: 44px;
+}
