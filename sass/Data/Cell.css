@@ -1,0 +1,72 @@
+/*create by wangzhiyong*/
+/*date:2016-08-22*/
+/*dasc:列表的样式*/
+
+.wasabi-data-ul
+{
+    padding: 0px;
+    margin: 0px;
+}
+.wasabi-data-li
+{
+    padding-top: 34px;
+    padding-bottom: 38px;
+    list-style: none;
+    padding-left:24px;
+    padding-right:24px;
+    border-bottom:1px solid red;
+    width:300px;
+}
+
+
+.wasabi-data-li:first-child
+{
+    border-top:1px solid #cccccc;
+}
+
+.wasabi-data-li.divider
+{
+    height: 24px;
+    line-height: 24px;
+    background-color: #eeeeee;
+    color: #666666;
+    font-size: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+}
+.wasabi-data-li .title
+{
+    font-size: 32px;
+    width:75%;
+    margin-bottom: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+
+}
+.wasabi-data-li .aside
+
+{
+    float: right;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    font-size: 24px;
+    color: #999999;
+    display: inline-block;
+}
+.wasabi-data-li .content
+{
+
+}
+.wasabi-data-li .content .li
+{
+    margin-bottom: 16px;
+    font-size: 26px;
+    color: #999999;
+}
+.wasabi-data-li .content .li:last-child
+{
+    margin-bottom: 0px;
+}
