@@ -7,14 +7,6 @@ let ReactDOM=require("react-dom");
 let Router=require("react-router").Router;
 let hashHistory=require("react-router").hashHistory;
 let Route=require("react-router").Route;
-let Root=React.createClass({
-    render(){
-        return <div className="root"><div className="aside_container"></div>
-        <div className="section_container">
-            {this.props.children}
-        </div></div>
-    }
-})
 //
 class App {
    constructor(routers)
@@ -26,6 +18,14 @@ class App {
        else {
            this.routers=[];
        }
+       this. Root=React.createClass({
+           render(){
+               return <div className="root"><div className="aside_container"></div>
+                   <div className="section_container">
+                       {this.props.children}
+                   </div></div>
+           }
+       })
 
    }
     addRoute(url,app)
@@ -35,7 +35,7 @@ class App {
     render() {
         ReactDOM.render(
             <Router history={hashHistory}>
-                <Route path="/" component={Root}>
+                <Route path="/" component={this.Root}>
                     {
                         this.routers.map((item,index)=>{
                           return<Route path={item.url} component={item.app}></Route>
@@ -48,5 +48,6 @@ class App {
 
     }
 }
+
 exports.module=App;
 

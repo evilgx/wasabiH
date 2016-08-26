@@ -122,7 +122,7 @@ let Cell=React.createClass({
 
             return <li className="wasabi-data-li" onTouch={this.onTouchHandler}>
                 <div className="title">{title}</div>
-                <div className="aside" style{{display:asideText!=null?"inline-block":"none"}}>{asideText}</div>
+                <div className="aside" style={{display:asideText!=null?"inline-block":"none"}}>{asideText}</div>
                 <div className="content">
                     {
                         content
@@ -133,3 +133,4 @@ let Cell=React.createClass({
         }
     }
 })
+exports.module=Cell;

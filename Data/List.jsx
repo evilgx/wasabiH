@@ -38,7 +38,7 @@ let List=React.createClass({
     },
     getDefaultProps:function(){
         return{
-            width:document.body.clientWidth,
+            width:document.documentElement.clientWidth,
             height:null,
             selectAble:false,
             detailAble:false,
