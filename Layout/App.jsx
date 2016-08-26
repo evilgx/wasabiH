@@ -19,7 +19,14 @@ let Root=React.createClass({
 class App {
    constructor(routers)
    {
-       this.routers=[];
+       if(routers)
+       {
+           this.routers=routers;
+       }
+       else {
+           this.routers=[];
+       }
+
    }
     addRoute(url,app)
     {

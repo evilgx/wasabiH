@@ -50,4 +50,7 @@ exports.Progress = require('./Layout/Progress.jsx');//
 exports.ActionSheet = require('./Navigation/ActionSheet.jsx');//
 exports.Navbar = require('./Navigation/Navbar.jsx');//
 exports.Tabs = require('./Navigation/Tabs.jsx');//
+exports.ButtonModel = require('./Model/ButtonModel.js');//
 exports.TabModel = require('./Model/TabModel.js');//
+exports.CellModel = require('./Model/CellModel.js');//
+exports.RouteModel = require('./Model/RouteModel.js');//
