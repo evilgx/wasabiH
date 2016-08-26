@@ -12,4 +12,4 @@ class CellModel {
         this.divider = divider;
     }
 }
-exports.module=CellModel;
+module .exports=CellModel;

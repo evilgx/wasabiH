@@ -9,36 +9,37 @@ let hashHistory=require("react-router").hashHistory;
 let Route=require("react-router").Route;
 //
 class App {
-   constructor(routers)
-   {
-       if(routers)
-       {
-           this.routers=routers;
-       }
-       else {
-           this.routers=[];
-       }
-       this. Root=React.createClass({
-           render(){
-               return <div className="root"><div className="aside_container"></div>
-                   <div className="section_container">
-                       {this.props.children}
-                   </div></div>
-           }
-       })
+    constructor(routers) {
+        if (routers) {
+            this.routers = routers;
+        }
+        else {
+            this.routers = [];
+        }
+        this.Root = React.createClass({
+            render(){
+                return <div className="root">
+                    <div className="aside_container"></div>
+                    <div className="section_container">
+                        {this.props.children}
+                    </div>
+                </div>
+            }
+        })
 
-   }
-    addRoute(url,app)
-    {
-        this.routers.push({url:url,app:app});
     }
+
+    addRoute(url, app) {
+        this.routers.push({url: url, app: app});
+    }
+
     render() {
         ReactDOM.render(
             <Router history={hashHistory}>
                 <Route path="/" component={this.Root}>
                     {
-                        this.routers.map((item,index)=>{
-                          return<Route path={item.url} component={item.app}></Route>
+                        this.routers.map((item, index)=> {
+                            return <Route path={item.url} component={item.app}></Route>
                         })
                     }
                 </Route>
@@ -49,5 +50,5 @@ class App {
     }
 }
 
-exports.module=App;
+module .exports=App;
 

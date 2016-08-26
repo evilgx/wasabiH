@@ -9,4 +9,4 @@ class RouteModel{
         this.component=component;
     }
 }
-exports.module=RouteModel;
+module .exports=RouteModel;
