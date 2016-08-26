@@ -9,7 +9,7 @@ let hashHistory=require("react-router").hashHistory;
 let Route=require("react-router").Route;
 //
 class App {
-    constructor(routers) {
+    constructor(routers=null) {
         if (routers) {
             this.routers = routers;
         }
@@ -35,7 +35,7 @@ class App {
 
     render() {
         ReactDOM.render(
-            <Router history={hashHistory}>
+            (<Router history={hashHistory}>
                 <Route path="/" component={this.Root}>
                     {
                         this.routers.map((item, index)=> {
@@ -43,7 +43,7 @@ class App {
                         })
                     }
                 </Route>
-            </Router>,
+            </Router>),
             document.getElementById("app")
         );
 
