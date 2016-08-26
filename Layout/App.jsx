@@ -39,7 +39,7 @@ class App {
                 <Route path="/" component={this.Root}>
                     {
                         this.routers.map((item, index)=> {
-                            return <Route key={"route"+index.toString()} path={item.url} component={item.app}></Route>
+                            return <Route key={"route"+index.toString()} path={item.url} component={item.component}></Route>
                         })
                     }
                 </Route>
