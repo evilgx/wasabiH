@@ -15,12 +15,31 @@ let Root=React.createClass({
         </div></div>
     }
 })
+//
+class App {
+   constructor(routers)
+   {
+       this.routers=[];
+   }
+    addRoute(url,app)
+    {
+        this.routers.push({url:url,app:app});
+    }
+    render() {
+        ReactDOM.render(
+            <Router history={hashHistory}>
+                <Route path="/" component={Root}>
+                    {
+                        this.routers.map((item,index)=>{
+                          return<Route path={item.url} component={item.app}></Route>
+                        })
+                    }
+                </Route>
+            </Router>,
+            document.getElementById("app")
+        );
 
-ReactDOM.render(
-    <Router history={hashHistory}>
-        <Route path="/" component={App}></Route>
-    </Router>,
-    document.getElementById("app")
-);
+    }
+}
+exports.module=App;
 
-module .exports=App;
