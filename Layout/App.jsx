@@ -7,6 +7,7 @@ let ReactDOM=require("react-dom");
 let Router=require("react-router").Router;
 let hashHistory=require("react-router").hashHistory;
 let Route=require("react-router").Route;
+let Link=require("react-router").Link;
 //
 class App {
     constructor(routers=null) {
@@ -32,7 +33,7 @@ class App {
                     return <div className="root">
                         <div className="aside_container"></div>
                         <div className="section_container">
-                           <div>心怡科技欢迎您</div>
+                           <div><Link to="/Home">心怡科技欢迎您</Link></div>
                         </div>
                     </div>
 
