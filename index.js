@@ -33,11 +33,15 @@ window.dpr = dpr;
 window.remBase = remBase;
 
 
+
 exports.Button = require('./Buttons/Button.jsx');//
 exports.LinkButton = require('./Buttons/LinkButton.jsx');//
 exports.Cell = require('./Data/Cell.jsx');//
 exports.List = require('./Data/List.jsx');//
-exports.Home=require("./Layout/Home.jsx");//主页
+
+
+exports.App = require('./Layout/App.jsx');//
+
 exports.Article = require('./Layout/Article.jsx');//
 exports.Footer = require('./Layout/Footer.jsx');//
 exports.Header = require('./Layout/Header.jsx');//
