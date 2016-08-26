@@ -26,5 +26,8 @@
     "url": "https://github.com/wangzhiyonglyk/wasabiH/issues"
   },
   "devDependencies": {
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-router": "^2.7.0"
   }
 }
