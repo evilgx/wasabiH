@@ -18,12 +18,26 @@ class App {
         }
         this.Root = React.createClass({
             render(){
-                return <div className="root">
-                    <div className="aside_container"></div>
-                    <div className="section_container">
-                        {this.props.children}
+                if(this.props.children)
+                {
+                    return <div className="root">
+                        <div className="aside_container"></div>
+                        <div className="section_container">
+                            {this.props.children}
+                        </div>
                     </div>
-                </div>
+                }
+                else
+                {
+                    return <div className="root">
+                        <div className="aside_container"></div>
+                        <div className="section_container">
+                           <div>心怡科技欢迎您</div>
+                        </div>
+                    </div>
+
+                }
+
             }
         })
 
