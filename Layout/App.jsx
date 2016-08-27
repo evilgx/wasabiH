@@ -9,7 +9,7 @@ let hashHistory=require("react-router").hashHistory;
 let Route=require("react-router").Route;
 let Link=require("react-router").Link;
 require("../sass/Layout/App.css");
-let Root=require("./Root.jsx");
+//
 class App {
     constructor(routers=null,Home=null,Menu=null,Welcome=null) {
         if (routers) {
@@ -21,8 +21,48 @@ class App {
         this.Menu=Menu;
         this.Home=Home;
         this.Welcome=Welcome;
-        let parent=
-        this.Root =<Root Menu={this.Menu} Home={this.Home} Welcome={this.Welcome}></Root>;
+        let parent=this;
+        this.Root = React.createClass({
+            render(){
+                if(parent.Welcome==null)
+                {
+                    if(parent.Home!=null)
+                    {
+                        return <div className="root">
+                            <div className="aside_container">
+                                {parent.Menu}
+                            </div>
+                            <div className="wasabi-section_container">
+                                {parent.Home}
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        return <div className="root">
+                            <div className="aside_container">
+                                {parent.Menu}
+                            </div>
+                            <div className="wasabi-section_container">
+                                {this.props.children}
+                            </div>
+                        </div>
+                    }
+
+                }
+                else
+                {
+                    return <div className="root">
+                        <div className="aside_container">{parent.Menu}</div>
+                        <div className="wasabi-section_container">
+                           <div><Link to="/home">心怡科技欢迎您,进入主页</Link></div>
+                        </div>
+                    </div>
+
+                }
+
+            }
+        })
 
     }
 
