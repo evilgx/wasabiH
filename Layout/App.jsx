@@ -9,6 +9,7 @@ let hashHistory=require("react-router").hashHistory;
 let Route=require("react-router").Route;
 let Link=require("react-router").Link;
 require("../sass/Layout/App.css");
+let Root=require("./Root.jsx");
 //
 class App {
     constructor(routers=null,Home=null,Menu=null,Welcome=null) {
@@ -21,47 +22,8 @@ class App {
         this.Menu=Menu;
         this.Home=Home;
         this.Welcome=Welcome;
-        this.Root = React.createClass({
-            render(){
-                if(this.Welcome==null)
-                {
-                    if(this.Home!=null)
-                    {
-                        return <div className="root">
-                            <div className="aside_container">
-                                {this.Menu}
-                            </div>
-                            <div className="wasabi-section_container">
-                                {this.Home}
-                            </div>
-                        </div>
-                    }
-                    else
-                    {
-                        return <div className="root">
-                            <div className="aside_container">
-                                {this.Menu}
-                            </div>
-                            <div className="wasabi-section_container">
-                                {this.props.children}
-                            </div>
-                        </div>
-                    }
-
-                }
-                else
-                {
-                    return <div className="root">
-                        <div className="aside_container">{this.Menu}</div>
-                        <div className="wasabi-section_container">
-                           <div><Link to="/home">心怡科技欢迎您,进入主页</Link></div>
-                        </div>
-                    </div>
-
-                }
-
-            }
-        })
+        let parent=this;
+        this.Root =<Root Home={this.Home} Menu={this.Menu}></Root>
 
     }
 
