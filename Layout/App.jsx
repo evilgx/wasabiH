@@ -11,28 +11,28 @@ let Link=require("react-router").Link;
 require("../sass/Layout/App.css");
 //
 class App {
-    constructor(routers=null,home=null,menu=null,welcome=null) {
+    constructor(routers=null,Home=null,Menu=null,Welcome=null) {
         if (routers) {
             this.routers = routers;
         }
         else {
             this.routers = [];
         }
-        this.menu=menu;
-        this.home=home;
-        this.welcome=welcome;
+        this.Menu=Menu;
+        this.Home=Home;
+        this.Welcome=Welcome;
         this.Root = React.createClass({
             render(){
-                if(this.welcome==null)
+                if(this.Welcome==null)
                 {
-                    if(this.home!=null)
+                    if(this.Home!=null)
                     {
                         return <div className="root">
                             <div className="aside_container">
-                                {this.menu}
+                                {this.Menu}
                             </div>
                             <div className="wasabi-section_container">
-                                {this.home}
+                                {this.Home}
                             </div>
                         </div>
                     }
@@ -40,7 +40,7 @@ class App {
                     {
                         return <div className="root">
                             <div className="aside_container">
-                                {this.menu}
+                                {this.Menu}
                             </div>
                             <div className="wasabi-section_container">
                                 {this.props.children}
@@ -52,7 +52,7 @@ class App {
                 else
                 {
                     return <div className="root">
-                        <div className="aside_container">{this.menu}</div>
+                        <div className="aside_container">{this.Menu}</div>
                         <div className="wasabi-section_container">
                            <div><Link to="/home">心怡科技欢迎您,进入主页</Link></div>
                         </div>
@@ -72,13 +72,13 @@ class App {
     render() {
 
         var routeArr=[];
-        if(this.home!=null)
+        if(this.Home!=null)
         {
-            routeArr.push(<Route key={"routeHome"} path={"/home"} component={this.home}></Route>);
+            routeArr.push(<Route key={"routeHome"} path={"/home"} component={this.Home}></Route>);
         }
-        if(this.welcome!=null)
+        if(this.Welcome!=null)
         {
-            routeArr.push(<Route key={"routeHome"} path={"/welcome"} component={this.welcome}></Route>);
+            routeArr.push(<Route key={"routeHome"} path={"/welcome"} component={this.Welcome}></Route>);
         }
         this.routers.map((item, index)=> {
             routeArr.push( <Route key={"route"+index.toString()} path={item.url} component={item.component}></Route>);
