@@ -8,6 +8,7 @@ let Router=require("react-router").Router;
 let hashHistory=require("react-router").hashHistory;
 let Route=require("react-router").Route;
 let Link=require("react-router").Link;
+require("../sass/Layout/App.css");
 //
 class App {
     constructor(routers=null,home=null,menu=null,welcome=null) {
@@ -30,7 +31,7 @@ class App {
                             <div className="aside_container">
                                 {this.menu}
                             </div>
-                            <div className="section_container">
+                            <div className="wasabi-section_container">
                                 {this.home}
                             </div>
                         </div>
@@ -41,7 +42,7 @@ class App {
                             <div className="aside_container">
                                 {this.menu}
                             </div>
-                            <div className="section_container">
+                            <div className="wasabi-section_container">
                                 {this.props.children}
                             </div>
                         </div>
@@ -52,7 +53,7 @@ class App {
                 {
                     return <div className="root">
                         <div className="aside_container">{this.menu}</div>
-                        <div className="section_container">
+                        <div className="wasabi-section_container">
                            <div><Link to="/home">心怡科技欢迎您,进入主页</Link></div>
                         </div>
                     </div>
