@@ -42,7 +42,7 @@ class App {
                                 {this.menu}
                             </div>
                             <div className="section_container">
-                                {this.home}
+                                {this.props.children}
                             </div>
                         </div>
                     }
