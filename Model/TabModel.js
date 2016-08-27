@@ -28,4 +28,4 @@ class TabModel {
 
     }
 }
-module .exportsTabModel;
+module .exports=TabModel;
