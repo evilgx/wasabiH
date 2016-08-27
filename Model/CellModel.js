@@ -5,10 +5,10 @@
 class CellModel {
     constructor(title, content, divider = false) {
         this.title = title;
-        this.asideText = asideText;
-        this.asideCount = asideCount;
+        this.asideText = null;
+        this.asideCount = null;
         this.content = content;
-        this.iconCls = iconCls;
+        this.iconCls = null;
         this.divider = divider;
     }
 }
