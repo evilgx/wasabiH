@@ -22,7 +22,7 @@ class App {
         this.welcome=welcome;
         this.Root = React.createClass({
             render(){
-                if(this.welcome=null)
+                if(this.welcome==null)
                 {
                     if(this.home!=null)
                     {
