@@ -54,3 +54,6 @@ exports.ButtonModel = require('./Model/ButtonModel.js');//
 exports.TabModel = require('./Model/TabModel.js');//
 exports.CellModel = require('./Model/CellModel.js');//
 exports.RouteModel = require('./Model/RouteModel.js');//
+
+
+exports.unit = require('./libs/unit.js');//
