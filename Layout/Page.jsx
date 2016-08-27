@@ -13,8 +13,7 @@ let Page=React.createClass({
             active: false,
         }
     },
-    getInitialState:function()
-    {
+    getInitialState:function() {
         return{
             active:this.props.active
         }
@@ -29,7 +28,7 @@ let Page=React.createClass({
     render :function() {
 
         return (<section className={"wasabi-page "+this.state.active?"active":""}>
-            {this.children}
+            {this.props.children}
         </section>)
     }
 
