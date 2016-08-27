@@ -9,7 +9,6 @@ let hashHistory=require("react-router").hashHistory;
 let Route=require("react-router").Route;
 let Link=require("react-router").Link;
 require("../sass/Layout/App.css");
-let Root=require("./Root.jsx");
 //
 class App {
     constructor(routers=null,Home=null,Menu=null,Welcome=null) {
