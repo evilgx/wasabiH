@@ -15,7 +15,10 @@ let Page=React.createClass({
     },
     getInitialState:function()
     {
-        active:this.props.active
+        return{
+            active:this.props.active
+        }
+
     },
     componentWillReceiveProps(nextProps)
     {
