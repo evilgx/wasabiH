@@ -22,7 +22,7 @@ class App {
         this.Home=Home;
         this.Welcome=Welcome;
         let parent=
-        this.Root =
+        this.Root =<Root Menu={this.Menu} Home={this.Home} Welcome={this.Welcome}></Root>;
 
     }
 
