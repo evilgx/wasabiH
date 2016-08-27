@@ -11,58 +11,32 @@ let Link=require("react-router").Link;
 require("../sass/Layout/App.css");
 //
 class App {
-    constructor(routers=null,Home=null,Menu=null,Welcome=null) {
+    constructor(Root=null,routers=null,Welcome=null) {
         if (routers) {
             this.routers = routers;
         }
         else {
             this.routers = [];
         }
-        this.Menu=Menu;
-        this.Home=Home;
-        this.Welcome=Welcome;
-        let parent=this;
-        this.Root = React.createClass({
-            render(){
-                if(parent.Welcome==null)
-                {
-                    if(parent.Home!=null)
-                    {
-                        return <div className="root">
-                            <div className="aside_container">
-                                {parent.Menu}
-                            </div>
-                            <div className="wasabi-section_container">
-                                {parent.Home}
-                            </div>
-                        </div>
-                    }
-                    else
-                    {
-                        return <div className="root">
-                            <div className="aside_container">
-                                {parent.Menu}
-                            </div>
-                            <div className="wasabi-section_container">
-                                {this.props.children}
-                            </div>
-                        </div>
-                    }
-
-                }
-                else
-                {
+        if(Root==null)
+        {
+            this.Root = React.createClass({
+                render(){
                     return <div className="root">
-                        <div className="aside_container">{parent.Menu}</div>
+                        <div className="aside_container">
+                        </div>
                         <div className="wasabi-section_container">
-                           <div><Link to="/home">心怡科技欢迎您,进入主页</Link></div>
+                            {this.props.children}
                         </div>
                     </div>
-
                 }
+            })
+        }
+        else {
+            this.Root=Root;
+        }
 
-            }
-        })
+
 
     }
 
@@ -72,25 +46,16 @@ class App {
 
     render() {
 
-        var routeArr=[];
-        if(this.Home!=null)
-        {
-            routeArr.push(<Route key={"routeHome"} path={"/home"} component={this.Home}></Route>);
-        }
-        if(this.Welcome!=null)
-        {
-            routeArr.push(<Route key={"routeHome"} path={"/welcome"} component={this.Welcome}></Route>);
-        }
+        var routeArr=[<Route path="/" component={this.Root}></Route>];
+
         this.routers.map((item, index)=> {
             routeArr.push( <Route key={"route"+index.toString()} path={item.url} component={item.component}></Route>);
         })
         ReactDOM.render(
             (<Router history={hashHistory}>
-                <Route path="/" component={this.Root}>
-                    {
-                 routeArr
-                    }
-                </Route>
+                {
+                    routeArr
+                }
             </Router>),
             document.getElementById("app")
         );
