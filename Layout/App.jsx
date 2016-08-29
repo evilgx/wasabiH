@@ -48,7 +48,7 @@ class App {
         {
             this.routers.map((item, index)=> {
                 var subrouterArr=[];
-                if(item.childrens instanceof  arr)
+                if(item.childrens instanceof  Array)
                 {
                     item.childrens.map((subItem,subIndex)=>
                     {
