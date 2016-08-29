@@ -44,9 +44,21 @@ class App {
 
         var routeArr=[<IndexRoute key="home" component={this.home}/>];
 
-        this.routers.map((item, index)=> {
-            routeArr.push( <Route key={"route"+index.toString()} path={item.url} component={item.component}></Route>);
-        })
+        if(this.routers instanceof  Array)
+        {
+            this.routers.map((item, index)=> {
+                var subrouterArr=[];
+                if(item.childrens instanceof  arr)
+                {
+                    item.childrens.map((subItem,subIndex)=>
+                    {
+                      subrouterArr.push(<Route key={"subroute"+subIndex.toString()} path={subItem.url} component={subItem.component}></Route>)
+                    })
+                }
+                    routeArr.push( <Route key={"route"+index.toString()} path={item.url} component={item.component}>{subrouterArr}</Route>);
+            })
+        }
+
         ReactDOM.render(
             (<Router history={hashHistory}>
                 <Route path="/" component={this.Root}>
