@@ -30,7 +30,7 @@ let Page=React.createClass({
     },
     render :function() {
 
-        if (this.routers instanceof array) {
+        if (this.routers instanceof Array) {
             var routeArr=[<IndexRoute key="subhome" component={this.state.routers[0].compoment}/>];
 
             this.routers.map((item, index)=> {

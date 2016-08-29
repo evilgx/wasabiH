@@ -8,3 +8,4 @@ render:function()
     </footer>
 }
 })
+module .exports=Footer;

@@ -4,3 +4,4 @@ let Article=React.createClass({
         return <article className="article">{this.props.children}</article>
     }
 })
+module .exports=Article;
