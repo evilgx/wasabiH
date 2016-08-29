@@ -4,7 +4,7 @@ let Footer=React.createClass({
 
 render:function()
 {
-    return <footer>{this.props.children}
+    return <footer >{this.props.children}
     </footer>
 }
 })
