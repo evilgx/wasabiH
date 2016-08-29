@@ -120,7 +120,7 @@ let Cell=React.createClass({
         }
         else {
 
-            return <li className="wasabi-data-li" onTouch={this.onTouchHandler}>
+            return <li className="wasabi-data-li" onclick ={this.onTouchHandler}>
                 <div className="title">{title}</div>
                 <div className="aside" style={{display:asideText!=null?"inline-block":"none"}}>{asideText}</div>
                 <div className="content">

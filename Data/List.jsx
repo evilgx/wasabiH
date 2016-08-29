@@ -501,4 +501,4 @@ let List=React.createClass({
         }
     }
 })
-exports.module=List;
+module .exports=List;
