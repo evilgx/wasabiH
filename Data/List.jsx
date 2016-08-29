@@ -3,6 +3,7 @@
 //desc 列表
 let React=require("react");
 let Cell =require("./Cell.jsx");
+let unit=require("../libs/unit.js");
 let List=React.createClass({
     PropTypes:{
         width:React.PropTypes.number,//宽度
