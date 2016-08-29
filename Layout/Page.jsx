@@ -13,9 +13,11 @@ let Page=React.createClass({
             active: false,
         }
     },
-    getInitialState:function()
-    {
-        active:this.props.active
+    getInitialState:function() {
+        return{
+            active:this.props.active
+        }
+
     },
     componentWillReceiveProps(nextProps)
     {
@@ -25,8 +27,8 @@ let Page=React.createClass({
     },
     render :function() {
 
-        return (<section className={"wasabi-page "+this.state.active?"active":""}>
-            {this.children}
+        return (<section className={"wasabi-page active"}>
+            {this.props.children}
         </section>)
     }
 

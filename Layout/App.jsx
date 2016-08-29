@@ -7,61 +7,32 @@ let ReactDOM=require("react-dom");
 let Router=require("react-router").Router;
 let hashHistory=require("react-router").hashHistory;
 let Route=require("react-router").Route;
-let Link=require("react-router").Link;
+let IndexRoute=require("react-router").IndexRoute;
 require("../sass/Layout/App.css");
 //
 class App {
-    constructor(routers=null,home=null,menu=null,welcome=null) {
+    constructor(home=null,routers=null,Welcome=null) {
         if (routers) {
             this.routers = routers;
         }
         else {
             this.routers = [];
         }
-        this.menu=menu;
         this.home=home;
-        this.welcome=welcome;
         this.Root = React.createClass({
             render(){
-                if(this.welcome==null)
-                {
-                    if(this.home!=null)
-                    {
-                        return <div className="root">
-                            <div className="aside_container">
-                                {this.menu}
-                            </div>
-                            <div className="wasabi-section_container">
-                                {this.home}
-                            </div>
-                        </div>
-                    }
-                    else
-                    {
-                        return <div className="root">
-                            <div className="aside_container">
-                                {this.menu}
-                            </div>
-                            <div className="wasabi-section_container">
-                                {this.props.children}
-                            </div>
-                        </div>
-                    }
-
-                }
-                else
-                {
-                    return <div className="root">
-                        <div className="aside_container">{this.menu}</div>
-                        <div className="wasabi-section_container">
-                           <div><Link to="/home">心怡科技欢迎您,进入主页</Link></div>
-                        </div>
+                return <div className="root">
+                    <div className="aside_container">
                     </div>
-
-                }
-
+                    <div className="wasabi-section_container">
+                        {this.props.children}
+                    </div>
+                </div>
             }
         })
+
+
+
 
     }
 
@@ -71,15 +42,8 @@ class App {
 
     render() {
 
-        var routeArr=[];
-        if(this.home!=null)
-        {
-            routeArr.push(<Route key={"routeHome"} path={"/home"} component={this.home}></Route>);
-        }
-        if(this.welcome!=null)
-        {
-            routeArr.push(<Route key={"routeHome"} path={"/welcome"} component={this.welcome}></Route>);
-        }
+        var routeArr=[<IndexRoute key="home" component={this.home}/>];
+
         this.routers.map((item, index)=> {
             routeArr.push( <Route key={"route"+index.toString()} path={item.url} component={item.component}></Route>);
         })
@@ -87,7 +51,7 @@ class App {
             (<Router history={hashHistory}>
                 <Route path="/" component={this.Root}>
                     {
-                 routeArr
+                        routeArr
                     }
                 </Route>
             </Router>),
