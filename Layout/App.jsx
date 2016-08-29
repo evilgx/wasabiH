@@ -7,19 +7,18 @@ let ReactDOM=require("react-dom");
 let Router=require("react-router").Router;
 let hashHistory=require("react-router").hashHistory;
 let Route=require("react-router").Route;
-let Link=require("react-router").Link;
+let IndexRoute=require("react-router").IndexRoute;
 require("../sass/Layout/App.css");
 //
 class App {
-    constructor(Root=null,routers=null,Welcome=null) {
+    constructor(home=null,routers=null,Welcome=null) {
         if (routers) {
             this.routers = routers;
         }
         else {
             this.routers = [];
         }
-        if(Root==null)
-        {
+       this.home=home;
             this.Root = React.createClass({
                 render(){
                     return <div className="root">
@@ -31,10 +30,7 @@ class App {
                     </div>
                 }
             })
-        }
-        else {
-            this.Root=Root;
-        }
+
 
 
 
@@ -46,16 +42,18 @@ class App {
 
     render() {
 
-        var routeArr=[<Route path="/" component={this.Root}></Route>];
+        var routeArr=[<IndexRoute component={this.home}/>];
 
         this.routers.map((item, index)=> {
             routeArr.push( <Route key={"route"+index.toString()} path={item.url} component={item.component}></Route>);
         })
         ReactDOM.render(
             (<Router history={hashHistory}>
+                <Route path="/" component={this.Root}>
                 {
                     routeArr
                 }
+                    </Route>
             </Router>),
             document.getElementById("app")
         );
