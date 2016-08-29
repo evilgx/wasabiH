@@ -10,7 +10,7 @@ let Cell=React.createClass({
        title:React.PropTypes.string,//标题
         asideText:React.PropTypes.string,//边际信息
         asideCount:React.PropTypes.number,//数字气泡
-        content:React.PropTypes.oneOfType([React.PropTypes.number,React.PropTypes.string,React.PropTypes.func]),//内容描述
+        //content:React.PropTypes.oneOfType([React.PropTypes.number,React.PropTypes.string,React.PropTypes.func]),//内容描述
         iconCls:React.PropTypes.string,//行图标
         divider:React.PropTypes.bool,//是否为分隔栏
         onTouch:React.PropTypes.func,//单击事件
