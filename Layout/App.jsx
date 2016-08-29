@@ -42,7 +42,7 @@ class App {
 
     render() {
 
-        var routeArr=[<IndexRoute component={this.home}/>];
+        var routeArr=[<IndexRoute key="home" component={this.home}/>];
 
         this.routers.map((item, index)=> {
             routeArr.push( <Route key={"route"+index.toString()} path={item.url} component={item.component}></Route>);
