@@ -27,7 +27,7 @@ let Page=React.createClass({
     },
     render :function() {
 
-        return (<section className={"wasabi-page "+this.state.active?"active":""}>
+        return (<section className={"wasabi-page active"}>
             {this.props.children}
         </section>)
     }
