@@ -3,6 +3,7 @@
 //desc 列表
 let React=require("react");
 let Cell =require("./Cell.jsx");
+let unit=require("../libs/unit.js");
 let List=React.createClass({
     PropTypes:{
         width:React.PropTypes.number,//宽度
@@ -30,7 +31,6 @@ let List=React.createClass({
         totalSource:React.PropTypes.string,//ajax的返回的数据源中哪个属性作为总记录数,为null时直接后台返回的数据中的total
         params:React.PropTypes.object,//查询条件
         onClick:React.PropTypes.func,//单击事件
-        onDoubleClick:React.PropTypes.func,//双击事件
         onChecked:React.PropTypes.func,//表格中有一行被选中
         detailHandler:React.PropTypes.func,//展示详情的函数，父组件一定要有返回值,返回详情组件
         footer:React.PropTypes.array,//页脚,
@@ -60,10 +60,11 @@ let List=React.createClass({
             totalSource:"data.total",//
             params:null,
             footer:null,//页脚
-            footerSource:"data.footer",//页脚数据源
-            onDoubleClick:null,
-            selectChecked:false,
+            onClick:null,
             onChecked:null,
+            footerSource:"data.footer",//页脚数据源
+            selectChecked:false,
+
 
         }
     },
@@ -501,4 +502,4 @@ let List=React.createClass({
         }
     }
 })
-exports.module=List;
+module .exports=List;

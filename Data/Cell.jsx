@@ -7,7 +7,7 @@ let Cell=React.createClass({
     propsType:{
         data:React.PropTypes.object,//本行数据
         model:React.PropTypes.object,//数据模型
-       title:React.PropTypes.string,//标题
+        title:React.PropTypes.string,//标题
         asideText:React.PropTypes.string,//边际信息
         asideCount:React.PropTypes.number,//数字气泡
         content:React.PropTypes.oneOfType([React.PropTypes.number,React.PropTypes.string,React.PropTypes.func]),//内容描述
@@ -29,18 +29,18 @@ let Cell=React.createClass({
         }
     },
 
-     getInitialState:function() {
-         return {
-             data:this.props.data,
-             model:this.props.model,
-             title: this.props.title,
-             asideText: this.props.asideText,
-             asideCount: this.props.asideCount,
-             Content: this.props.Content,
-             iconCls: this.props.iconCls,
-             subCotent:this.props.subCotent,
-         }
-     },
+    getInitialState:function() {
+        return {
+            data:this.props.data,
+            model:this.props.model,
+            title: this.props.title,
+            asideText: this.props.asideText,
+            asideCount: this.props.asideCount,
+            Content: this.props.Content,
+            iconCls: this.props.iconCls,
+
+        }
+    },
     componentWillReceiveProps:function(nextProps) {
         this.setState({
             data:nextProps.data,
@@ -50,7 +50,7 @@ let Cell=React.createClass({
             asideCount: nextProps.asideCount,
             Content: nextProps.Content,
             iconCls: nextProps.iconCls,
-            subCotent:nextProps.subCotent,
+
         })
     },
     onTouchHandler:function()
@@ -63,7 +63,7 @@ let Cell=React.createClass({
     render:function()
     {
         var title=this.state.title;
-        var dividerasideText=this.state.asideText;
+        var asideText=this.state.asideText;
         var asideCount=this.state.asideCount;
         var content=this.state.content;
         var divider=this.state.divider;
@@ -120,7 +120,7 @@ let Cell=React.createClass({
         }
         else {
 
-            return <li className="wasabi-data-li" onTouch={this.onTouchHandler}>
+            return <li className="wasabi-data-li" onClick ={this.onTouchHandler}>
                 <div className="title">{title}</div>
                 <div className="aside" style={{display:asideText!=null?"inline-block":"none"}}>{asideText}</div>
                 <div className="content">
@@ -133,4 +133,4 @@ let Cell=React.createClass({
         }
     }
 })
-exports.module=Cell;
+module .exports=Cell;
