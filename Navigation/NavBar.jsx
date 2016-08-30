@@ -4,7 +4,7 @@ var LinkButton=require('../Buttons/LinkButton.jsx');
 var NavBar=React.createClass({
     propTypes:{
         buttons:React.PropTypes.array.isRequired,//
-        buttonClick:React.PropTypes.func.isRequired,//单击触发事件
+        buttonClick:React.PropTypes.func,//单击触发事件
         style:React.PropTypes.object,//style 样式
         background:React.PropTypes.string,//背景颜色
     },
@@ -48,7 +48,7 @@ var NavBar=React.createClass({
     render(){
         var width=100/this.state.buttons.length.toFixed(2) + '%';
         var buttonList=this.state.buttons.map((child,index)=>{
-                return <LinkButton width={width} key={child.name} {...child} onClick={this.buttonClick.bind(this,child.name,child.title)}></LinkButton>
+            return <LinkButton width={width} key={child.name} {...child} onClick={this.buttonClick.bind(this,child.name,child.title)}></LinkButton>
         })
         return(
             <div className="wasabiH-toolbar" style={this.style()}>

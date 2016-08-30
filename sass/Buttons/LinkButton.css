@@ -1,13 +1,12 @@
 @import url("../base.css");
-body{ padding-bottom:1.27rem;}
+body{ padding-bottom:0.96rem;}
 .wasabiH-linkbutton{
-    height: 1.27rem;
-    padding-top: 0.2rem;
+    height: 1.4rem;
+    padding-top: 0.186666666rem;
     text-align: center;
     position: relative;
     display: inline-block;
     text-decoration: none;
-    font-size: 20px;
 }
 .wasabiH-linkbutton .Link{
     position: absolute;
@@ -25,7 +24,7 @@ body{ padding-bottom:1.27rem;}
     vertical-align: bottom;
 }
 .wasabiH-title{
-    padding-top: 0.11rem;
+    padding-top: 0.08rem;
     text-align: center;
     text-overflow: ellipsis;
     overflow: hidden;
