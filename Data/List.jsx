@@ -30,7 +30,7 @@ let List=React.createClass({
         backSource:React.PropTypes.string,//ajax的返回的数据源中哪个属性作为数据源,为null时直接后台返回的数据作为数据源
         totalSource:React.PropTypes.string,//ajax的返回的数据源中哪个属性作为总记录数,为null时直接后台返回的数据中的total
         params:React.PropTypes.object,//查询条件
-        onClick:React.PropTypes.func,//单击事件
+        onTouch:React.PropTypes.func,//单击事件
         onChecked:React.PropTypes.func,//表格中有一行被选中
         detailHandler:React.PropTypes.func,//展示详情的函数，父组件一定要有返回值,返回详情组件
         footer:React.PropTypes.array,//页脚,
@@ -60,7 +60,7 @@ let List=React.createClass({
             totalSource:"data.total",//
             params:null,
             footer:null,//页脚
-            onClick:null,
+            onTouch:null,
             onChecked:null,
             footerSource:"data.footer",//页脚数据源
             selectChecked:false,
@@ -333,7 +333,7 @@ let List=React.createClass({
             focusIndex:index
         })
     },
-    onClick:function(rowData,rowIndex){
+    onTouch:function(rowData,rowIndex){
         if(this.props.selectChecked==true) {
             let key=this.getKey(rowIndex);//获取关键字
             if(this.state.checkedData.has(key)) {
@@ -343,9 +343,9 @@ let List=React.createClass({
                 this.onChecked(rowIndex,key);
             }
         }
-        if(this.props.onClick!=null)
+        if(this.props.onTouch!=null)
         {
-            this.props.onClick(rowIndex,rowData);
+            this.props.onTouch(rowIndex,rowData);
         }
 
     },
@@ -488,7 +488,7 @@ let List=React.createClass({
         {
 
             this.state.data.map((item,index)=>{
-                Cells.push(<Cell key={"cell"+index} data={item} rowIndex={index} model={this.props.model}></Cell>)
+                Cells.push(<Cell key={"cell"+index} data={item} rowIndex={index} model={this.props.model} onTouch={this.onTouch}></Cell>)
             })
 
              return <ul className="wasabi-data-ul">
