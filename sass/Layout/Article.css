@@ -1,7 +1,7 @@
 /*create by wangzhiyong*/
 /*date:2016-08-25*/
 /*desc:页体样式*/
-.wasabi-article {
+.rticle {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -12,11 +12,11 @@
     z-index: 0;
     background-color: #fff;
 }
-.wasabi-article.active {
+.article.active {
     visibility: visible;
     display: block;
     z-index: 1;
 }
-header ~ .wasabi-article {
+header ~ .article {
     top: 44px;
 }

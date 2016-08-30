@@ -7,6 +7,7 @@ class RouteModel{
     {
         this.url=url;
         this.component=component;
+        this.childrens=null;
     }
 }
 module .exports=RouteModel;

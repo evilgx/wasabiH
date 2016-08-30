@@ -2,9 +2,10 @@
 let React =require("react");
 let Footer=React.createClass({
 
-render:function()
-{
-    return <footer>{this.props.children}
-    </footer>
-}
+    render:function()
+    {
+        return <footer >{this.props.children}
+        </footer>
+    }
 })
+module .exports=Footer;

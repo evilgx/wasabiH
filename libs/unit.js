@@ -271,9 +271,9 @@ baseUtil.fetch = {
             fetchmodel.url,
             {
                 method:"POST",
-                headers:{
-                    "Content-Type": "application/json;charset=UTF-8"
-                },
+                //headers:{
+                //    "Content-Type": "application/json;charset=UTF-8"
+                //},
                 body:fetchmodel.params?JSON.stringify(fetchmodel.params):''
             }
         ).then(function(res){
