@@ -488,7 +488,7 @@ let List=React.createClass({
         {
 
             this.state.data.map((item,index)=>{
-                Cells.push(<Cell key={"cell"+index} data={item} model={this.props.model}></Cell>)
+                Cells.push(<Cell key={"cell"+index} data={item} rowIndex={index} model={this.props.model}></Cell>)
             })
 
              return <ul className="wasabi-data-ul">

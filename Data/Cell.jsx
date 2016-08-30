@@ -14,6 +14,7 @@ let Cell=React.createClass({
         iconCls:React.PropTypes.string,//行图标
         divider:React.PropTypes.bool,//是否为分隔栏
         onTouch:React.PropTypes.func,//单击事件
+        rowIndex:React.PropTypes.number,//下标
     },
     getDefaultProps:function(){
         return {
@@ -83,7 +84,7 @@ let Cell=React.createClass({
                             title=this.state.data[this.state.model[prop]];
                         }
                         else   if(typeof  this.state.model[prop] ==="function"){
-                            title=this.state.model[prop](this.state.data);
+                            title=this.state.model[prop](this.state.data,this.props.rowIndex);
                         }
                         break ;
                     case "asideText":
@@ -102,7 +103,7 @@ let Cell=React.createClass({
                             content=this.state.data[this.state.model[prop]];
                         }
                         else   if(typeof  this.state.model[prop] ==="function"){
-                            content=this.state.model[prop](this.state.data);
+                            content=this.state.model[prop](this.state.data,this.props.rowIndex);
                         }
                         break ;
                     case "divider":
