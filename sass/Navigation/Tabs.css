@@ -6,8 +6,24 @@
     position: relative;
     width: 100%;
     background: #ffffff;
-    font-size: 32px;
 }
+@media screen and (-webkit-min-device-pixel-ratio:1){
+    .wasabiH-tabs .header{
+        font-size: 16px;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2){
+    .wasabiH-tabs .header{
+        font-size: 32px;
+    }
+}
+@media screen and (-webkit-min-device-pixel-ratio:3){
+    .wasabiH-tabs .header{
+        font-size: 48px;
+    }
+}
+
 .wasabiH-tabs .header a{
     width: 50%;
     display: inline-block;
@@ -25,7 +41,7 @@
     /*overflow: auto;*/
     width: 100%;
     overflow: auto;
-    bottom: 60px;
+    bottom: 0.8rem;
 }
 .wasabiH-tabs .section>div {
     display:none;

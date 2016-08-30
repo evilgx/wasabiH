@@ -6,8 +6,8 @@ header {
     color: #fff;
     top: 0;
     top: 0;
-    height: 44px;
-    line-height: 44px;
+    height: 0.586666666rem;
+    line-height: 0.586666666rem;
     display: -webkit-box;
     display: box;
 }
@@ -18,7 +18,7 @@ header, footer, .header-secondary {
     z-index: 10;
 }
 header nav {
-    padding: 0 5px;
+    padding: 0 0.06666666rem;
 }
 header nav.left {
     position: absolute;
