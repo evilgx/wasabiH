@@ -55,3 +55,13 @@ a {
 a:hover {
     opacity: 1
 }
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+li{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
