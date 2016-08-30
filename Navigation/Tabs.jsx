@@ -13,7 +13,7 @@ var Tabs=React.createClass({
         return {
             tabs: [],
             theme:"default",
-            height:"44px",
+            height:"1.16rem",
         }
     },
     getInitialState(){
@@ -42,13 +42,19 @@ var Tabs=React.createClass({
     render(){
         return(
             <div className="wasabiH-tabs" style={this.props.style}>
-                <ul className="header">
+                <div className="header">
                     {
                         this.state.tabs.map((child,index)=>{
-                            return <li key={index} style={{height:this.props.height,lineHeight:this.props.height}} className={"wasabiH-tabs  "+this.props.theme+" "+(child.active==true?"active ":"")} onClick={this.tabClickHandler.bind(this,index)}><span>{child.title}</span></li>
+                            return <a key={child.title+index}
+                                      style={{height:this.props.height,lineHeight:this.props.height}}
+                                      className={"wasabiH-tabs  "+this.props.theme+" "+(child.active==true?"active ":"")}
+                                      onClick={this.tabClickHandler.bind(this,index)}>
+                                        {child.title}
+                                        <div style={{width:"1.33rem",height:1,background:"#3aaeff",margin:"auto",display:child.active==true?"block ":"none"}}></div>
+                                    </a>
                         })
                     }
-                </ul>
+                </div>
                 <div className={"section "+this.props.theme} style={{position:"absolute",top:this.props.height}}>
                     {this.state.tabs.map((child, index)=> {
                         return (<div key={index} className={(child.active==true?"active":"")}>{child.content}</div>);

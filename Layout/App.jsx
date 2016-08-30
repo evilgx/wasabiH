@@ -18,18 +18,18 @@ class App {
         else {
             this.routers = [];
         }
-       this.home=home;
-            this.Root = React.createClass({
-                render(){
-                    return <div className="root">
-                        <div className="aside_container">
-                        </div>
-                        <div className="wasabi-section_container">
-                            {this.props.children}
-                        </div>
+        this.home=home;
+        this.Root = React.createClass({
+            render(){
+                return <div className="root">
+                    <div className="aside_container">
                     </div>
-                }
-            })
+                    <div className="wasabi-section_container">
+                        {this.props.children}
+                    </div>
+                </div>
+            }
+        })
 
 
 
@@ -62,10 +62,10 @@ class App {
         ReactDOM.render(
             (<Router history={hashHistory}>
                 <Route path="/" component={this.Root}>
-                {
-                    routeArr
-                }
-                    </Route>
+                    {
+                        routeArr
+                    }
+                </Route>
             </Router>),
             document.getElementById("app")
         );

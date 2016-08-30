@@ -30,11 +30,11 @@ let Page=React.createClass({
     },
     render :function() {
 
-            return (<section className={"wasabi-page "+this.state.active}>
-                {this.props.header}
-                {this.props.children}
-                {this.props.footer}
-            </section>)
+        return (<section className={"wasabi-page "+this.state.active}>
+            {this.props.header}
+            {this.props.children}
+            {this.props.footer}
+        </section>)
 
     }
 
