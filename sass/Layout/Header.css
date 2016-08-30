@@ -1,5 +1,6 @@
   /*create by wangzhiyong*/
 /*页头样式*/
+  @import url("../base.css");
 header {
     background-color: #46CA5E;
     border-bottom: 1px solid #c8c8c8;

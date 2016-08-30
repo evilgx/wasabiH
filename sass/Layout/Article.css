@@ -1,7 +1,8 @@
 /*create by wangzhiyong*/
 /*date:2016-08-25*/
 /*desc:页体样式*/
-.rticle {
+@import url("../base.css");
+.article {
     position: absolute;
     top: 0;
     bottom: 0;
