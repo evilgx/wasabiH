@@ -1,6 +1,7 @@
 require("../sass/Buttons/LinkButton.css");
 require("../sass/Buttons/icon.scss");
 var React =require("react");
+let Link=require("react-router").Link;
 var LinkButton=React.createClass({
     propTypes:{
         name:React.PropTypes.string,//名称
@@ -14,6 +15,7 @@ var LinkButton=React.createClass({
         iconCls:React.PropTypes.string,//图片
         backgroundColor:React.PropTypes.string,//背景颜色
         onClick:React.PropTypes.func,//单击事件
+        to:React.PropTypes.string,//链接
     },
     getDefaultProps() {
         return {
@@ -26,12 +28,14 @@ var LinkButton=React.createClass({
         return{
             title:this.props.title,
             active:this.props.active,
+            to:this.props.to,
         }
     },
     componentWillReceiveProps(nextProps){
         this.setState({
             title:nextProps.title,
             active:nextProps.active,
+            to:nextProps.to,
         })
     },
     clickHandle(){
@@ -52,10 +56,11 @@ var LinkButton=React.createClass({
     },
     render(){
         return(
-            <a className={"wasabiH-linkbutton "+this.props.theme} style={this.style()} name={this.props.name} onClick={this.clickHandle}>
-                <i className={"wasabiH-icon "+this.props.iconCls+" "+(this.state.active==true?"active ":"")}></i>
-                <div className={"wasabiH-title "+(this.state.active==true?"active ":"")}>{this.state.title}</div>
-            </a>
+                <div className={"wasabiH-linkbutton "+this.props.theme} style={this.style()} name={this.props.name} onClick={this.clickHandle}>
+                    <i className={"wasabiH-icon "+this.props.iconCls+" "+(this.state.active==true?"active ":"")}></i>
+                    <div className={"wasabiH-title "+(this.state.active==true?"active ":"")}>{this.state.title}</div>
+                    <Link to={this.state.to} className="Link"></Link>
+                </div>
         )
     }
 });

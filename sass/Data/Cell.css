@@ -9,13 +9,14 @@
 }
 .wasabi-data-li
 {
-    padding-top: 34px;
-    padding-bottom: 38px;
+    padding-top: 0.4533333333rem;
+    padding-bottom: 0.50666666rem;
     list-style: none;
-    padding-left:24px;
-    padding-right:24px;
-    border-bottom:1px solid red;
-    width:300px;
+    padding-left:0.32rem;
+    padding-right:0.32rem;
+    border-bottom:1px solid #cccccc;
+    width:100%;
+
 }
 
 
@@ -26,47 +27,114 @@
 
 .wasabi-data-li.divider
 {
-    height: 24px;
-    line-height: 24px;
+    height: 0.32rem;
+    line-height: 0.32rem;
     background-color: #eeeeee;
     color: #666666;
-    font-size: 24px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 0.16rem;
+    padding-bottom: 0.16rem;
 
 }
-.wasabi-data-li .title
+@media screen and (-webkit-min-device-pixel-ratio:1){
+    .wasabi-data-li.divider{
+        font-size: 12px;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2){
+    .wasabi-data-li.divider{
+        font-size: 24px;
+    }
+}
+@media screen and (-webkit-min-device-pixel-ratio:3){
+    .wasabi-data-li.divider{
+        font-size: 36px;
+    }
+}
+
+
+    .wasabi-data-li .title
 {
-    font-size: 32px;
     width:75%;
-    margin-bottom: 30px;
+    margin-bottom: 0.4rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     display: inline-block;
 
 }
+@media screen and (-webkit-min-device-pixel-ratio:1){
+    .wasabi-data-li .title{
+        font-size: 16px;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2){
+    .wasabi-data-li .title{
+        font-size: 32px;
+    }
+}
+@media screen and (-webkit-min-device-pixel-ratio:3){
+    .wasabi-data-li .title{
+        font-size: 48px;
+    }
+}
+
 .wasabi-data-li .aside
 
 {
     float: right;
-    padding-bottom: 4px;
-    padding-top: 4px;
+    padding-bottom: 0.0533333333rem;
+    padding-top: 0.0533333333rem;
     font-size: 24px;
     color: #999999;
     display: inline-block;
 }
-.wasabi-data-li .content
+@media screen and (-webkit-min-device-pixel-ratio:1){
+    .wasabi-data-li .aside{
+        font-size: 12px;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2){
+    .wasabi-data-li .aside{
+        font-size: 24px;
+    }
+}
+@media screen and (-webkit-min-device-pixel-ratio:3){
+    .wasabi-data-li .aside{
+        font-size: 36px;
+    }
+}
+
+
+.wasabi-data-li .content *
 {
 
 }
-.wasabi-data-li .content .li
+.wasabi-data-li .content
 {
-    margin-bottom: 16px;
-    font-size: 26px;
+    margin-bottom: 0.2133333333rem;
     color: #999999;
 }
+@media screen and (-webkit-min-device-pixel-ratio:1){
+    .wasabi-data-li .content *{
+        font-size: 12px;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2){
+    .wasabi-data-li .content *{
+        font-size: 13px;
+    }
+}
+@media screen and (-webkit-min-device-pixel-ratio:3){
+    .wasabi-data-li .content *{
+        font-size: 39px;
+    }
+}
+
 .wasabi-data-li .content .li:last-child
 {
-    margin-bottom: 0px;
+    margin-bottom: 0rem;
 }
