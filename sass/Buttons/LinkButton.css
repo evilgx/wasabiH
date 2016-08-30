@@ -9,6 +9,14 @@ body{ padding-bottom:1.27rem;}
     text-decoration: none;
     font-size: 20px;
 }
+.wasabiH-linkbutton .Link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    z-index: 99999;
+}
 .wasabiH-icon{
     width: 0.64rem;
     height:0.64rem;
