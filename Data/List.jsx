@@ -345,7 +345,7 @@ let List=React.createClass({
         }
         if(this.props.onTouch!=null)
         {
-            this.props.onTouch(rowIndex,rowData);
+            this.props.onTouch(rowData,rowIndex);
         }
 
     },

@@ -58,7 +58,7 @@ let Cell=React.createClass({
     {
         if(this.props.onTouch!=null)
         {
-            this.props.onTouch(data,this.props.rowIndex);
+            this.props.onTouch(this.state.data,this.props.rowIndex);
         }
     },
     render:function()
