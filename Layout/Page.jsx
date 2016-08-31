@@ -33,7 +33,7 @@ let Page=React.createClass({
         return (<div className="wasabi-section_container">
             <section className={"wasabi-page active"}>
                 {this.props.header}
-                {this.props.children}
+                {this.props.section}
                 {this.props.footer}
             </section>
         </div>)
