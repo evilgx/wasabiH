@@ -5,6 +5,9 @@
 let React=require("react");
 let Route=require("react-router").Route;
 let IndexRoute=require("react-router").IndexRoute;
+require("../sass/Layout/Page.css");
+require("../sass/Layout/Header.css");
+require("../sass/Layout/Footer.css");
 let Page=React.createClass({
     propsType:{
         active:React.PropTypes.bool,//是否激活
@@ -29,15 +32,13 @@ let Page=React.createClass({
         })
     },
     render :function() {
-
-        return (<section className={"wasabi-page "+this.state.active}>
-            {this.props.header}
-            {this.props.children}
-            {this.props.footer}
-        </section>)
-
+        return (<div className="wasabi-section_container">
+            <section className={"wasabi-page active"}>
+                {this.props.header}
+                {this.props.children}
+                {this.props.footer}
+            </section>
+        </div>)
     }
-
-
 })
 module .exports=Page;
