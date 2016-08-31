@@ -20,3 +20,6 @@
 header ~ .article {
     top: 0.586666666rem;
 }
+header[style*="display"] ~ .article {
+    top: 0rem;
+}
