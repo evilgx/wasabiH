@@ -9,7 +9,7 @@
     width: 100%;
     visibility: hidden;
     display: none;
-    overflow: hidden;
+    overflow: auto;
     z-index: 0;
     background-color: #fff;
 }

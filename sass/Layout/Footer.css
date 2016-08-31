@@ -4,13 +4,14 @@ footer {
 }
 footer {
     bottom: 0;
-    height: 0.68rem;
+    height: 1.4rem;
+    overflow:hidden;
 }
-header, footer, .header-secondary {
+header, footer {
     position: absolute;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 2;
 }
 footer {
     bottom: 0;
