@@ -3,8 +3,6 @@
 //一个单页面
 //
 let React=require("react");
-let Route=require("react-router").Route;
-let IndexRoute=require("react-router").IndexRoute;
 require("../sass/Layout/Page.css");
 require("../sass/Layout/Header.css");
 require("../sass/Layout/Footer.css");
