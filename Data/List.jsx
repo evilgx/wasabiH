@@ -491,11 +491,11 @@ let List=React.createClass({
                 Cells.push(<Cell key={"cell"+index} data={item} rowIndex={index} model={this.props.model} onTouch={this.onTouch}></Cell>)
             })
 
-             return <ul className="wasabi-data-ul">
-                 {
-                     Cells
-                 }
-             </ul>
+            return <ul className="wasabi-data-ul">
+                {
+                    Cells
+                }
+            </ul>
         }
         else {
             return null;

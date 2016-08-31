@@ -18,7 +18,7 @@ let Article=React.createClass({
         {
             style.height=this.props.height;
         }
-        return <article style={style} className="article">{this.props.children}</article>
+        return <article style={style} className="article active">{this.props.children}</article>
     }
 })
 module .exports=Article;

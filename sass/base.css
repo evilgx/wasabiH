@@ -12,22 +12,24 @@ body {
     -webkit-text-size-adjust:none;
     /* background-color: #222;*/
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold;
     letter-spacing: -0.05em;
     overflow: hidden;
 }
 html{
     -webkit-text-size-adjust: none;
+    font-weight: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio:1){
     *{
         font-size: 12px;
+
     }
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:2){
     *{
         font-size: 24px;
+
     }
 }
 @media screen and (-webkit-min-device-pixel-ratio:3){
@@ -44,6 +46,7 @@ body * {
     -webkit-user-select: none;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-font-smoothing: antialiased;
+    font-weight: normal;
 }
 
 a {

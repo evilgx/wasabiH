@@ -19,3 +19,8 @@
     overflow: hidden;
     display: none;
 }
+.wasabi-page.active
+{
+    display: block;
+
+}

@@ -1,6 +1,6 @@
 @import url("../base.css");
-body{ padding-bottom:0.96rem;}
 .wasabiH-linkbutton{
+    border-top: 1px solid rgba(0,0,0,0.3);
     height: 1.4rem;
     padding-top: 0.186666666rem;
     text-align: center;
@@ -30,6 +30,23 @@ body{ padding-bottom:0.96rem;}
     overflow: hidden;
     white-space: nowrap;
     color: #929292;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:1){
+    .wasabiH-title{
+        font-size: 10px;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2){
+    .wasabiH-title{
+        font-size: 20px;
+    }
+}
+@media screen and (-webkit-min-device-pixel-ratio:3){
+    .wasabiH-title{
+        font-size: 30px;
+    }
 }
 .wasabiH-title.active{
     color: #3aaeff;

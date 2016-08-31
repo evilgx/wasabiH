@@ -6,6 +6,7 @@ let React=require("react");
 require("../sass/Layout/Page.css");
 require("../sass/Layout/Header.css");
 require("../sass/Layout/Footer.css");
+require("../sass/Layout/Article.css");
 let Header=require("./Header.jsx");
 let Article=require("./Article.jsx");
 let Footer=require("./Footer.jsx");
@@ -35,7 +36,7 @@ let Page=React.createClass({
 
     },
     setHeight:function(props) {
-        let height = document.documentElement.clientHeight;
+        let height = document.body.clientHeight;
         if (props.header != null) {
 
             height = height - window.rem2px(0.586666666);
@@ -60,7 +61,7 @@ let Page=React.createClass({
     render :function() {
 
         return (<div className="wasabi-section_container">
-            <section className={"wasabi-page "+this.state.active==true?"active":""}>
+            <section className={"wasabi-page "+(this.state.active==true?"active":"")}>
                <Header style={{display:this.props.header?"block":"none"}}>{this.props.header}</Header>
                <Article height={this.state.height} > {this.props.article}</Article>
                 <Footer style={{display:this.props.footer?"block":"none"}}>{this.props.footer}</Footer>
