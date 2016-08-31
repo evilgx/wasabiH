@@ -23,11 +23,11 @@ fontEl.innerHTML = 'html{font-size:' + remBase + 'px!important;}';
 // 给js调用的，某一dpr下rem和px之间的转换函数
 window.rem2px = function(v) {
     v = parseFloat(v);
-    return v * rem;
+    return v * window.remBase;
 };
 window.px2rem= function(v) {
     v = parseFloat(v);
-    return v / rem;
+    return v / window.remBase;
 };
 window.dpr = dpr;
 window.remBase = remBase;

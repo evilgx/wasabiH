@@ -24,28 +24,37 @@ let Page=React.createClass({
         }
     },
     getInitialState:function() {
-        let height=document.documentElement.clientHeight;
-        if(this.props.header!=null)
-        {
-
-            height=height-window.rem2px(0.586666666);
-        }
-        if(this.props.footer!=null)
-        {
-
-            height=height-window.rem2px(1.4);
-        }
+        let  height=this.setHeight(this.props);
         return{
             active:this.props.active,
-
-
+            header:this.props.header,
+            footer:this.props.footer,
+            article:this.props.article,
+            height:height
         }
 
     },
+    setHeight:function(props) {
+        let height = document.documentElement.clientHeight;
+        if (props.header != null) {
+
+            height = height - window.rem2px(0.586666666);
+        }
+        if (props.footer != null) {
+
+            height = height - window.rem2px(1.4);
+        }
+        return height;
+    },
     componentWillReceiveProps(nextProps)
     {
+        let  height=this.setHeight(nextProps);
         this.setState({
             active:nextProps.active,
+            header:nextProps.header,
+            footer:nextProps.footer,
+            article:nextProps.article,
+            height:height
         })
     },
     render :function() {
